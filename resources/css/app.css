@@ -1,0 +1,34 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base  {
+    .btn-primary{
+        @apply px-4 py-2 border border-primary bg-primary rounded text-white font-bold hover:bg-primary-darker
+    }
+
+    .btn-secondary{
+        @apply px-4 py-2 border border-black bg-black rounded text-white font-bold hover:bg-transparent hover:text-gray-600 hover:border hover:border-gray-600
+    }
+
+    .btn-danger{
+        @apply px-4 py-2 border bg-red-500 rounded text-white font-bold hover:bg-red-800
+    }
+
+    .site-logo{
+        @apply text-primary
+    }
+
+    body.homepage #site-header{
+        @apply bg-transparent absolute w-full text-white
+    }
+    body.homepage .site-logo{
+        @apply text-white
+    }
+}
+
+@layer components {
+    .hero{
+        background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/img/hero-banner-3.jpg');
+    }
+}
